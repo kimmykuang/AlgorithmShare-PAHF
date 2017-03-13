@@ -1,0 +1,40 @@
+.grid_item {
+    display: block;
+    border: 1px solid #bbb;
+    float: left;
+    line-height:12px;
+    font-size:10px;
+    width:50px;
+    height: 50px;
+}
+.grid_item.wall {
+    background-color: #e0e0ee;
+}
+.grid_item.weight1 {
+    background-color: #ffffff;
+}
+.grid_item.weight3 {
+    background-color: #D6EAFF;
+}
+.grid_item.weight5 {
+    background-color: #ABD1FF;
+}
+.grid_item.start {
+    background-color: #FF703F;
+}
+.grid_item.active {
+    background-color: #FF703F;
+}
+.grid_text_class_G {
+    float: left;
+    position: relative;
+    line-height: 7;
+}
+.grid_text_class_F {
+    position: relative;
+}
+.grid_text_class_H {
+    float: right;
+    position: relative;
+    line-height: 7;
+}
