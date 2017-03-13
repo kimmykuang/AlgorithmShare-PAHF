@@ -1,0 +1,415 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3. 寻路算法 · 算法分享</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="Kimmy Kuang <kimmykuang@hotmail.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="map.html" />
+    
+    
+    <link rel="prev" href="../../algorithm.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    1. 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../algorithm.html">
+            
+                <a href="../../algorithm.html">
+            
+                    
+                    2. 什么是算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    3. 寻路算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="map.html">
+            
+                <a href="map.html">
+            
+                    
+                    3.1. 地图表示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="algorithm.html">
+            
+                <a href="algorithm.html">
+            
+                    
+                    3.2. 寻路算法的几种实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="astar/astar_intro.html">
+            
+                <a href="astar/astar_intro.html">
+            
+                    
+                    3.3. A*算法介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="astar/astar_algorithm_analysis.html">
+            
+                <a href="astar/astar_algorithm_analysis.html">
+            
+                    
+                    3.3.1. 算法解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="astar/astar_pseudocode.html">
+            
+                <a href="astar/astar_pseudocode.html">
+            
+                    
+                    3.3.2. 伪代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="astar/astar_code.html">
+            
+                <a href="astar/astar_code.html">
+            
+                    
+                    3.3.3. 代码实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="astar/astar_demo.html">
+            
+                <a href="astar/astar_demo.html">
+            
+                    
+                    3.3.4. demo展示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="astar/astar_optimize.html">
+            
+                <a href="astar/astar_optimize.html">
+            
+                    
+                    3.3.5. A*的优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../intro/qa.html">
+            
+                <a href="../../intro/qa.html">
+            
+                    
+                    4. Q & A
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../intro/quote.html">
+            
+                <a href="../../intro/quote.html">
+            
+                    
+                    5. 文章引用及工具介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../intro/sign.html">
+            
+                <a href="../../intro/sign.html">
+            
+                    
+                    6. 签到
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >3. 寻路算法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x5BFB;&#x8DEF;&#x7B97;&#x6CD5;">&#x5BFB;&#x8DEF;&#x7B97;&#x6CD5;</h2>
+<p>&#x5BFB;&#x8DEF;&#x4E0D;&#x7BA1;&#x662F;&#x5728;&#x73B0;&#x5B9E;&#x4E16;&#x754C;&#x4EA6;&#x6216;&#x8005;&#x662F;&#x6E38;&#x620F;&#x5236;&#x4F5C;&#x884C;&#x4E1A;&#xFF0C;&#x90FD;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x3002;</p>
+<p>&#x8003;&#x8651;&#x5982;&#x4E0B;&#x56FE;&#x5C55;&#x793A;&#x7684;&#x60C5;&#x5F62;&#xFF0C;&#x5BFB;&#x8DEF;&#x662F;&#x4E00;&#x4EF6;&#x52A8;&#x6001;&#x7684;&#x3001;&#x590D;&#x6742;&#x7684;&#x4E8B;&#x60C5;&#x3002;&#x56FE;&#x4E2D;&#x5728;&#x8D77;&#x70B9;&#x5230;&#x7EC8;&#x70B9;&#x4E4B;&#x95F4;&#x6709;&#x4E00;&#x9053;&#x56F4;&#x5899;&#xFF0C;&#x8FD9;&#x9053;&#x56F4;&#x5899;&#x5F88;&#x53EF;&#x80FD;&#x5C31;&#x662F;&#x5BF9;&#x5BFB;&#x8DEF;&#x7B97;&#x6CD5;&#x8BBE;&#x4E0B;&#x7684;&#x201D;&#x9677;&#x9631;&#x201C;&#xFF0C;&#x5B9E;&#x73B0;&#x7CDF;&#x7CD5;&#x7684;&#x5BFB;&#x8DEF;&#x53EF;&#x80FD;&#x4E0D;&#x5F97;&#x4E0D;&#x904D;&#x5386;&#x5B8C;&#x6574;&#x4E2A;&#x534A;&#x5305;&#x56F4;&#x533A;&#x57DF;&#x624D;&#x80FD;&#x53D1;&#x89C9;&#x76EE;&#x6807;&#x70B9;&#x5E76;&#x4E0D;&#x5728;&#x91CC;&#x9762;&#x3002;&#x6240;&#x4EE5;&#x5F80;&#x5F80;&#x6211;&#x4EEC;&#x4F1A;&#x5E0C;&#x671B;&#x5BFB;&#x8DEF;&#x7B97;&#x6CD5;&#x4F1A;&#x6709;&#x201D;&#x8FDC;&#x89C1;&#x201C;&#x80FD;&#x529B;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x80FD;&#x5373;&#x5FEB;&#x53C8;&#x51C6;&#x786E;&#x5730;&#x627E;&#x5230;&#x4E00;&#x6761;&#x901A;&#x5F80;&#x76EE;&#x7684;&#x5730;&#x7684;&#x8DEF;&#x5F84;&#x3002;</p>
+<p><img src="../../images/routing.jpg" alt="&#x5BFB;&#x8DEF;&#x5C55;&#x793A;"></p>
+<p>&#x5BFB;&#x8DEF;&#x7B97;&#x6CD5;&#x90FD;&#x662F;&#x5F3A;&#x70C8;&#x4F9D;&#x8D56;&#x4E8E;&#x5730;&#x56FE;&#x7684;&#xFF0C;&#x5730;&#x56FE;&#x7684;&#x62BD;&#x8C61;&#x5316;&#x597D;&#x574F;&#x76F4;&#x63A5;&#x53EF;&#x4EE5;&#x51B3;&#x5B9A;&#x5BFB;&#x8DEF;&#x7B97;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x7ED3;&#x679C;&#x4F18;&#x52A3;&#xFF0C;&#x4E0B;&#x9762;&#x4ECB;&#x7ECD;&#x4E0B;<code>&#x5730;&#x56FE;&#x8868;&#x793A;</code>&#x7684;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../../algorithm.html" class="navigation navigation-prev " aria-label="Previous page: 2. 什么是算法">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="map.html" class="navigation navigation-next " aria-label="Next page: 3.1. 地图表示">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3. 寻路算法","level":"1.3","depth":1,"next":{"title":"3.1. 地图表示","level":"1.3.1","depth":2,"path":"lists/routing/map.md","ref":"lists/routing/map.md","articles":[]},"previous":{"title":"2. 什么是算法","level":"1.2","depth":1,"path":"algorithm.md","ref":"algorithm.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kimmy Kuang <kimmykuang@hotmail.com>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"算法分享","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"算法介绍","extension":null},"file":{"path":"lists/routing/README.md","mtime":"2016-11-20T14:52:17.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-13T02:13:10.555Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
